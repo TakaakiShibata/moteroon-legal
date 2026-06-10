@@ -1,58 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><title>Privacy Policy - moteroon</title>
-<style>body{font-family:Arial,sans-serif;max-width:800px;margin:40px auto;padding:0 20px;line-height:1.6;}</style>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — moteroon</title>
+<style>
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;max-width:860px;margin:0 auto;padding:40px 24px;line-height:1.7;color:#222;background:#fafafa}
+  h1{color:#FF4D6D;border-bottom:3px solid #FF4D6D;padding-bottom:8px}
+  h2{color:#333;margin-top:32px;font-size:22px}
+  .nav{margin-bottom:24px}
+  .nav a{color:#FF4D6D;text-decoration:none;font-weight:600}
+  .meta{background:#FFF5F7;padding:16px;border-radius:8px;border-left:4px solid #FF4D6D;margin-bottom:24px}
+  ul{padding-left:24px}
+  li{margin-bottom:6px}
+  a{color:#FF4D6D}
+  table{width:100%;border-collapse:collapse;margin:16px 0}
+  th,td{text-align:left;padding:10px;border-bottom:1px solid #eee}
+  th{background:#FFF5F7;color:#FF4D6D}
+</style>
 </head>
 <body>
+
+<div class="nav"><a href="index.html">← Back to Home</a></div>
+
 <h1>Privacy Policy</h1>
-<p><strong>Effective Date:</strong> May 14, 2026<br>
-<strong>Last Updated:</strong> May 18, 2026</p>
+
+<div class="meta">
+  <strong>Effective Date:</strong> May 14, 2026<br>
+  <strong>Last Updated:</strong> June 11, 2026
+</div>
 
 <h2>1. Introduction</h2>
-<p>This Privacy Policy explains how moteroon ("Application", "we", "us", or "our") collects, uses, and protects information when the Developer uses the Application. The Application is a personal automation tool used exclusively by its Developer to post video content to TikTok.</p>
+<p>This Privacy Policy explains how moteroon (the "Application", "we", "us", or "our") collects, uses, stores, and protects information when the Developer uses the Application. The Application is a private automation tool used exclusively by its sole Developer to publish original short video content to the Developer's own social media accounts on TikTok, YouTube, and Instagram.</p>
 
-<h2>2. Information We Collect</h2>
-<p>The Application collects and processes the following information:</p>
+<h2>2. Scope and Applicability</h2>
+<p>This Privacy Policy applies only to data processing by the Application itself. It does <strong>not</strong> apply to:</p>
 <ul>
-  <li><strong>TikTok OAuth Access Token:</strong> An access token obtained through TikTok's OAuth 2.0 authentication flow. This token is stored locally on the Developer's device.</li>
-  <li><strong>TikTok Open ID:</strong> A unique identifier assigned by TikTok to the Developer's account, used for API authentication.</li>
-  <li><strong>Video content:</strong> Pre-recorded video files selected by the Developer for upload to TikTok.</li>
+  <li>How TikTok collects or processes data (see <a href="https://www.tiktok.com/legal/page/us/privacy-policy/en" target="_blank">TikTok's Privacy Policy</a>)</li>
+  <li>How YouTube collects or processes data (see <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>)</li>
+  <li>How Instagram collects or processes data (see <a href="https://privacycenter.instagram.com/policy" target="_blank">Instagram's Privacy Policy</a>)</li>
 </ul>
 
-<h2>3. How We Use Information</h2>
+<h2>3. Information We Collect</h2>
+<p>The Application collects and processes only the minimum data necessary to function. Specifically:</p>
+<table>
+  <tr><th>Data Type</th><th>Source</th><th>Purpose</th></tr>
+  <tr><td>TikTok OAuth Access Token</td><td>TikTok OAuth 2.0 flow</td><td>Authenticate API requests on behalf of the Developer</td></tr>
+  <tr><td>TikTok Refresh Token</td><td>TikTok OAuth 2.0 flow</td><td>Renew access tokens without re-authentication</td></tr>
+  <tr><td>TikTok Open ID</td><td>TikTok API</td><td>Identifier for the Developer's own TikTok account</td></tr>
+  <tr><td>Pre-rendered video files (MP4)</td><td>Developer's local file system</td><td>Upload to the Developer's TikTok account</td></tr>
+  <tr><td>Public video statistics</td><td>TikTok Display API</td><td>Local analytics review of own videos</td></tr>
+</table>
+
+<h2>4. Information We Do NOT Collect</h2>
+<p>The Application does <strong>not</strong> collect, process, or store any of the following:</p>
+<ul>
+  <li>Data about any TikTok user other than the Developer</li>
+  <li>Personal information of any third party</li>
+  <li>Device identifiers, IP addresses, or precise location</li>
+  <li>Biometric, financial, or government identification information</li>
+  <li>Browsing or behavioral tracking data</li>
+</ul>
+
+<h2>5. How We Use Information</h2>
 <p>The information collected is used exclusively for:</p>
 <ul>
-  <li>Authenticating API requests to TikTok on behalf of the Developer</li>
-  <li>Uploading video content to the Developer's TikTok account</li>
+  <li>Authenticating API requests to TikTok using the Developer's own credentials</li>
+  <li>Uploading the Developer's own pre-recorded video content to the Developer's own TikTok account</li>
+  <li>Fetching and locally displaying public statistics of the Developer's own videos for personal performance review</li>
 </ul>
-<p>No information is used for advertising, analytics, or any commercial purpose.</p>
+<p>No information is used for advertising, profiling, machine learning training, or any commercial purpose beyond the Developer's own content management workflow.</p>
 
-<h2>4. Data Storage and Security</h2>
-<p>All data, including access tokens, is stored locally on the Developer's personal device. No data is stored on external servers operated by the Developer. Data is transmitted only to TikTok's official API endpoints using HTTPS encryption.</p>
+<h2>6. Data Storage and Security</h2>
+<p>All data, including OAuth access and refresh tokens, is stored <strong>locally on the Developer's personal computer</strong>. Specifically:</p>
+<ul>
+  <li>Tokens are stored in encrypted JSON files within the Application's local working directory</li>
+  <li>The Developer's computer is protected by operating system user account controls and full disk encryption</li>
+  <li>No data is stored on any external server, cloud database, or remote infrastructure operated by the Developer</li>
+  <li>All API communication uses HTTPS / TLS 1.2+ encryption</li>
+</ul>
 
-<h2>5. Data Sharing and Disclosure</h2>
-<p>We do not sell, trade, or otherwise share any data with third parties. Data is transmitted only to TikTok's API as necessary to provide the Application's functionality.</p>
+<h2>7. Data Sharing and Disclosure</h2>
+<p>We do <strong>not</strong> sell, trade, lease, share, or otherwise transfer any data to third parties. Data is transmitted only to TikTok's official API endpoints (and the equivalent endpoints of YouTube and Instagram) as necessary to provide the Application's functionality. No data is shared with advertisers, analytics providers, or any other third party.</p>
 
-<h2>6. Third-Party Services</h2>
-<p>The Application uses TikTok's Content Posting API. TikTok may collect and process data in accordance with their own Privacy Policy, available at: <a href="https://www.tiktok.com/legal/page/us/privacy-policy/en">https://www.tiktok.com/legal/page/us/privacy-policy/en</a></p>
+<h2>8. Data Retention</h2>
+<table>
+  <tr><th>Data</th><th>Retention Period</th></tr>
+  <tr><td>OAuth Access Token</td><td>Until expiry (typically 24 hours) or until manually deleted by the Developer</td></tr>
+  <tr><td>OAuth Refresh Token</td><td>Up to 365 days, or until manually deleted</td></tr>
+  <tr><td>TikTok Open ID</td><td>Until the Developer manually deletes local data</td></tr>
+  <tr><td>Pre-rendered MP4 files</td><td>Stored locally indefinitely at the Developer's discretion</td></tr>
+  <tr><td>Local statistics cache</td><td>Indefinitely or until manually deleted</td></tr>
+</table>
 
-<h2>7. Data Retention</h2>
-<p>Access tokens are retained locally on the Developer's device until they expire (typically 24 hours) or are manually deleted. Refresh tokens may be retained for up to 365 days to allow re-authentication without repeating the OAuth flow.</p>
+<h2>9. User Rights</h2>
+<p>As the sole user of this Application, the Developer has full and immediate control over all data, including the right to:</p>
+<ul>
+  <li>Revoke API access at any time via TikTok's settings page</li>
+  <li>Delete the local credential files at any time</li>
+  <li>Stop using the Application at any time</li>
+</ul>
+<p>Because the Application processes no third-party data, no other persons are involved in or affected by data subject rights.</p>
 
-<h2>8. User Rights</h2>
-<p>As the sole user of this Application, the Developer has full control over all data, including the right to delete access tokens at any time by removing the token file from their device.</p>
+<h2>10. Children's Privacy</h2>
+<p>The Application is not intended for, and not made available to, children under the age of 13. The Developer is over the age of 18. No data of any child is collected.</p>
 
-<h2>9. Children's Privacy</h2>
-<p>The Application is not intended for use by children under the age of 13. We do not knowingly collect personal information from children.</p>
+<h2>11. International Data Transfers</h2>
+<p>When the Application transmits data to TikTok's API endpoints, that data may be processed on TikTok's servers located outside Japan, including in Singapore, the United States, and other jurisdictions. By using the Application, the Developer consents to such transfers, which occur strictly as necessary to use TikTok's services.</p>
 
-<h2>10. International Data Transfers</h2>
-<p>Data may be transferred to TikTok's servers located outside Japan. By using the Application, the Developer consents to such transfers.</p>
+<h2>12. Cookies and Tracking</h2>
+<p>The Application is a local script-based tool and does not use cookies, tracking pixels, browser fingerprinting, or any web tracking technologies.</p>
 
-<h2>11. Changes to This Privacy Policy</h2>
-<p>This Privacy Policy may be updated at any time. The "Last Updated" date at the top of this page will reflect any changes.</p>
+<h2>13. Security Incident Response</h2>
+<p>In the event of a credential compromise (e.g., the Developer's machine is lost or stolen), the Developer will:</p>
+<ol>
+  <li>Revoke all OAuth tokens via the TikTok app settings</li>
+  <li>Delete the local credential files</li>
+  <li>Re-generate fresh credentials before resuming use of the Application</li>
+</ol>
 
-<h2>12. Contact Information</h2>
-<p>For questions regarding this Privacy Policy, please contact:<br>
-Email: moteroon.jp@gmail.com</p>
+<h2>14. Changes to This Privacy Policy</h2>
+<p>This Privacy Policy may be updated at any time. The "Last Updated" date at the top of this page will reflect any changes. Material changes will be highlighted on this page.</p>
+
+<h2>15. Governing Law</h2>
+<p>This Privacy Policy is governed by the laws of Japan. Personal data processing also complies with the Act on the Protection of Personal Information (APPI) of Japan to the extent applicable.</p>
+
+<h2>16. Contact Information</h2>
+<p>For questions regarding this Privacy Policy, please contact:</p>
+<p>
+  <strong>Developer:</strong> Takaaki Shibata (Individual Developer, Japan)<br>
+  <strong>Email:</strong> <a href="mailto:moteroon.jp@gmail.com">moteroon.jp@gmail.com</a><br>
+  <strong>Response time:</strong> Within 5 business days
+</p>
+
 </body>
 </html>
